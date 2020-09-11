@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="buttonClicked"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/pBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="cash price"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/iBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="intrest(%)"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/aBox"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/aBox"
+        app:layout_constraintTop_toBottomOf="@+id/aBox" />
+
+    <EditText
+        android:id="@+id/aBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:ems="10"
+        android:hint="amortization"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/pBox"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/pBox"
+        app:layout_constraintTop_toBottomOf="@+id/pBox" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="350dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="15dp"
+        android:onClick="buttonClicked"
+        android:text="A N A L Y Z E"
+        app:layout_constraintEnd_toEndOf="@+id/iBox"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/iBox"
+        app:layout_constraintTop_toBottomOf="@+id/iBox" />
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.943">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/output"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fontFamily="monospace" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
